@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+h1{
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 5em;
+    text-align: center;
+    color: rgba(0, 0, 0, 0.569);
+    margin: 60px;
+}
+.form{
+    margin: 40px auto;
+    width: 450px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.form input{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    padding: 8px 15px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 5px gray;
+}
+.form button{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+    width: 450px;
+    padding: 15px 20px;
+    margin: auto;
+    border-radius: 20px;
+}
+li{
+    background-color: white;
+    padding: 10px 30px;
+    margin-bottom: 5px;
+    position: relative;
+    cursor: pointer;
+}
+.delete{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    display: block;
+    margin-left: auto;
+    background-color: white;
+    color: red;
+    outline: none;
+    border: none;
+    padding: 2px 4px;
+    height: 100%;
+    cursor: pointer;
+}
+img{
+    position: absolute;
+    left: -30px;
+    top: 6px;
+    width: 30px;
+    height: 30px;
+}
+ul li::before {
+    content: "";
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 6px;
+    left: -10px;
+}
+ul li.checked {
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(checked.png);
+}
